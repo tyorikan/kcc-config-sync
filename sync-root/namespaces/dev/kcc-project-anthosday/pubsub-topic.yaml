@@ -4,3 +4,5 @@ metadata:
   labels:
     env: dev
   name: onair-20210623-demo-topic
+spec:
+  resourceID: pubsub-topic-onair-20210623
