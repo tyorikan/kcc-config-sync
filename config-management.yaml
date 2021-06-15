@@ -1,0 +1,12 @@
+# config-management.yaml
+
+apiVersion: configmanagement.gke.io/v1
+kind: ConfigManagement
+metadata:
+  name: config-management
+spec:
+  # clusterName is required and must be unique among all managed clusters
+  clusterName: infra-admin-cluster
+  # Enable multi-repo mode to use additional features
+  enableMultiRepo: true
+

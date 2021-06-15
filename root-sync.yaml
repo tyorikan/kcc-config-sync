@@ -1,0 +1,14 @@
+apiVersion: configsync.gke.io/v1beta1
+kind: RootSync
+metadata:
+  name: root-sync
+  namespace: config-management-system
+spec:
+  sourceFormat: hierarchy
+  git:
+    repo: git@github.com:tyorikan/kcc-config-sync.git
+    branch: main
+    dir: "sync-root"
+    auth: ssh
+    secretRef:
+      name: git-creds
