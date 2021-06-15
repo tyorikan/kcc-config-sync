@@ -9,7 +9,12 @@ gcloud container clusters create infra-admin-cluster \
     --release-channel regular \
     --addons ConfigConnector \
     --workload-pool=anthosday.svc.id.goog \
-    --enable-stackdriver-kubernetes
+    --enable-stackdriver-kubernetes \
+    --enable-autoscaling \
+    --num-nodes 2 \
+    --min-nodes 1 \
+    --max-nodes 5 \
+    --region asia-northeast1
 ```
 cnrm-system namespaces にインストールされていることを確認  
 ```shell
@@ -109,4 +114,8 @@ spec:
 ```
 ```shell
 kubectl apply -f root-sync.yaml
+```
+Watch sync status
+```shell
+nomos status --contexts gke_anthosday_asia-northeast1_infra-admin-cluster
 ```
