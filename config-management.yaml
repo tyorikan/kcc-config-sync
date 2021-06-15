@@ -9,4 +9,3 @@ spec:
   clusterName: infra-admin-cluster
   # Enable multi-repo mode to use additional features
   enableMultiRepo: true
-
