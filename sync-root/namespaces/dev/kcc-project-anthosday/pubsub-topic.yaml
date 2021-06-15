@@ -1,10 +1,4 @@
 apiVersion: pubsub.cnrm.cloud.google.com/v1beta1
 kind: PubSubTopic
 metadata:
-  labels:
-    env: dev
   name: onair-20210623-demo-topic
-  annotations:
-    cnrm.cloud.google.com/deletion-policy: abandon
-#spec:
-#  resourceID: pubsub-topic-onair-20210623
