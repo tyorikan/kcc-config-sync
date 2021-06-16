@@ -6,7 +6,7 @@
 2. Config Connector を適用したクラスタの作成
 ```shell
 gcloud container clusters create infra-admin-cluster \
-    --release-channel regular \
+    --release-channel stable \
     --addons ConfigConnector \
     --workload-pool=anthosday.svc.id.goog \
     --enable-stackdriver-kubernetes \
