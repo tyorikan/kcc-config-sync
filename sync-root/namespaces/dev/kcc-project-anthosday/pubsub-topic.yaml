@@ -1,15 +1,15 @@
 apiVersion: pubsub.cnrm.cloud.google.com/v1beta1
 kind: PubSubTopic
 metadata:
-  name: onair-20210623-demo-topic
+  name: appmod-onair-20210623-demo-topic
 ---
 apiVersion: pubsub.cnrm.cloud.google.com/v1beta1
 kind: PubSubSubscription
 metadata:
-  name: onair-20210623-demo-subscription
+  name: appmod-onair-20210623-demo-subscription
 spec:
   ackDeadlineSeconds: 15
   messageRetentionDuration: 86400s
   retainAckedMessages: false
   topicRef:
-    name: onair-20210623-demo-topic
+    name: appmod-onair-20210623-demo-topic

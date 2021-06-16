@@ -36,7 +36,8 @@ config-connector@anthosday.iam.gserviceaccount.com \
 --role="roles/iam.workloadIdentityUser"
 ```
 
-4. configconnector.yaml の作成
+4. configconnector.yaml の作成  
+   Config Connector Operator は、Google Cloud Resource CRD と Config Connector コンポーネントをクラスタにインストールする
 ```yaml
 apiVersion: core.cnrm.cloud.google.com/v1beta1
 kind: ConfigConnector
@@ -79,7 +80,8 @@ kubectl create secret generic git-creds \
 --from-file=ssh=.ssh/git-creds
 ```
 
-9. config-management.yaml の作成
+9. config-management.yaml の作成  
+   Config Sync の動作を構成するために、ConfigManagement CustomResource の構成ファイルを作成
 ```yaml
 apiVersion: configmanagement.gke.io/v1
 kind: ConfigManagement
